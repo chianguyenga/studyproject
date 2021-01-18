@@ -1,0 +1,59 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+#register-form {
+    box-sizing: border-box;
+}
+td {
+    padding: 0px 15px 20px 0px;
+}
+form {
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    width: 600px;
+    padding-left: 10px;
+}
+label::after {
+    content: " *";
+    color: #e32;
+    font-size: 0.8rem;
+}
+.form-label {
+    text-align: left;
+} 
+#register-form{
+    background-color: dimgray;
+}
+.form-caption {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 15px;
+    padding: 5px;
+}
+input{
+    margin: 5px;
+    padding: 8px;
+}
+input[type=button] {
+    background-color: forestgreen;
+    padding: 10px;
+    
+}
+select {
+    padding: 8px;
+    width: 100px;
+    margin-left: 10px;
+}
+.button {
+    text-align: center;
+}
+@media only screen and (max-width: 768px) {
+    form {
+        
+        left: 0px;
+        width: auto;
+    }
+    input {
+        size: 0.5rem;
+    }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/form.css">
+    <title>Document</title>
+</head>
+<body>
+<form id="register-form" action="/form.php">
+    <table>
+        <caption class="form-caption">Form đăng ký</caption>
+        <tr class="form-label">
+            <th><label for="lastname">Họ</label></th>
+            <th><label for="name">Tên</label></th>
+        </tr>
+        <tr class="form-label">
+            <td><input id="lastname" type="text" placeholder="Nhập họ" name="họ" minlength="2" maxlength="30" size="30" required></td>
+            <td><input id="firstname" type="text" placeholder="Nhập tên" name="tên" minlength="2" maxlength="30" size="30" required></td>
+        </tr >
+        <tr class="form-label">
+            <th><label>Email</label></th>
+        </tr>
+        <tr class="form-label">
+            <td colspan="2"><input id="email" type="email" placeholder="Nhập địa chỉ email" name="email" pattern="[a-z0-9.%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autocomplete="username" size="72" required></td>
+        </tr>
+        <tr class="form-label">
+            <th><label>Mật khẩu (6-30 ký tự)</label></th>
+            <th><label>Nhập lại mật khẩu</label></th>
+        </tr>
+        <tr>
+            <td>
+                <input type="password" id="password" name="password" autocomplete="new-password"
+                minlength="6"
+                maxlength="30" placeholder="Mật khẩu"/>
+            </td>
+            <td>
+                <input id="psw-repeat" type="password" placeholder="Nhập lại mật khẩu" name="psw-repeat" autocomplete="new-password" minlength="6" maxlength="30" size="30" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Năm sinh </label>
+                <select id="year" style="width: 60%; margin-left: 15px;" required>
+                    <option selected="selected">-Chọn-</option>
+                    <option value="1990">1990</option>
+                    <option value="1991">1991</option>
+                    <option value="1992">1992</option>
+                    <option value="1993">1993</option>
+                    <option value="1994">1994</option>
+                    <option value="1995">1995</option>
+                    <option value="1996">1996</option>
+                    <option value="1997">1997</option>
+                    <option value="1998">1998</option>
+                    <option value="1999">1999</option>
+                    <option value="2000">2000</option>
+                    
+                </select>
+            </td>
+            <td>
+               <span>Giới tính</span>
+               <input type="radio" id="male" name="gender" value="male"><span>Nam</span>
+               <input type="radio" id="female" name="gender" value="female"><span>Nữ</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Thành phố</label>
+                <select id="city" style="width: 60%;" required>
+                    <option selected="selected">-Chọn-</option>
+                    <option value="Hn">Hà Nội</option>
+                    <option value="HCM">Hồ Chí Minh</option>
+                    <option value="Hp">Hải Phòng</option>
+                    <option value="Dn">Đà Nẵng</option>
+                    <option value="Ct">Cần Thơ</option>
+                    <option value="Qn">Quảng Ninh</option>
+                    <option value="other">Other</option>
+                </select>
+            </td>
+        </tr>
+        <tr class ="button">
+            <td colspan="2"><input onclick="getInfo()" id="button" type="button" value="Đăng ký"></td>
+        </tr>
+    </table>
+</form>
+ <script src="/form.js" >
+    
+ </script>   
+</body>
+</html>
